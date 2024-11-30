@@ -11,5 +11,11 @@
   <h1><%=restaurant.name%></h1>
   <p><%=restaurant.address%></p>
     <p><%=restaurant.phone%></p>
+    <p><%=restaurant.IsOpen%></p>
+    <% if(restaurant.IsOpen == true){ %>
+        <p>Yes, we are open</p>
+    <% } else { %>
+        <p>Sorry, we are closed</p>
+    <% } %>
 </body>
 </html>
