@@ -9,12 +9,14 @@
     <%- include('./partials/nav') %> <!---partial templete from lesson level up-->
   <h1>Full Menu</h1>
   <ul>
-    <b> <% menu.forEach (function(item)  { %> </b> <!---need to figure out a better seperation--> 
-        <li><b><%=item.name%> - $<%=item.price%></b> - 
-            Rating <%=item.rating%> 
-          - <%=item.details%></li>
-    <% }); %>
-    </ul>
+  <% menu.forEach(function(item) { %>
+    <li>
+      <%= item.name %> - $<%= item.price %> - Rating: <%= item.rating %> - <%= item.details %>
+       <% if (item.rating === 5) { %> ⭐ <% } %> <!--level up content to add star emoji -->
+    </li>
+  <% }); %>
+  <h3> ⭐ is Guest Favorite </h3>
+</ul>
     <h2>Mains</h2>
     <ul>
         <b> <% menu.forEach(function(item)  { %> </b>
